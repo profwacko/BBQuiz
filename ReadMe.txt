@@ -1,3 +1,4 @@
+0. Make sure hardware has been loaded with AdvancedFirmata
 1. Place bg.jpg in folder for appropriate background
 2. Open appropriate 'Breakout Server' in 'server' folder. Open connection to QuizApp hardware by clicking Connect. Something like this should appear.
 
