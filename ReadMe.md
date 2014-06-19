@@ -8,12 +8,10 @@ How to Setup
 2. Place bg.jpg in folder for appropriate background
 3. Open appropriate 'Breakout Server' in 'server' folder. Open connection to QuizApp hardware by clicking Connect. Something like this should appear:
 
-```
-* Breakout Server v0.2.3
+        Breakout Server v0.2.3
+        Server running on: http://joaqbook-prold:8887/
+        Connected to IOBoard on: /dev/cu.usbserial-A6008cLV
 
-* Server running on: http://joaqbook-prold:8887/
-* Connected to IOBoard on: /dev/cu.usbserial-A6008cLV
-```
 
 4. Open BBQuiz.html in browser of choice, for more fun, switch to presentation or full screen mode.
 5. It should be working properly.
