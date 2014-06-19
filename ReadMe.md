@@ -1,7 +1,7 @@
 BBQuiz
 ===================
 
-BBQuiz was developed for a Quiz Show using an arduino and switches with HTML + Javascript as a GUI. It uses [BreakoutServer](https://github.com/soundanalogous/Breakout) and AdvancedFirmata developed by Jeff Hoefs for communication between the Arduino and the HTML/Javascript GUI. 
+BBQuiz was developed for a Quiz Show using an Arduino Duemilanove and pushbutton switches interfaced with HTML + Javascript as a GUI. It uses [BreakoutServer](https://github.com/soundanalogous/Breakout) and AdvancedFirmata developed by Jeff Hoefs for communication between the Arduino and the HTML/Javascript GUI.
 
 
 Setup
