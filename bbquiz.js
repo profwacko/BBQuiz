@@ -9,12 +9,13 @@
     maincount=0;
         
 $(document).ready(function() {
-    // Declare these variables so you don't have to type the full namespace
+
     var IOBoard = BO.IOBoard;
     var IOBoardEvent = BO.IOBoardEvent;
     var LED = BO.io.LED;
     var Button = BO.io.Button;
     var ButtonEvent = BO.io.ButtonEvent;
+
     // Set to true to print debug messages to console
     BO.enableDebugging = true; 
     
@@ -24,51 +25,51 @@ $(document).ready(function() {
     // of the computer that the Arduino board is connected to.
     var host = window.location.hostname;
     // if the file is opened locally, set the host to "localhost"
-    if (window.location.protocol.indexOf("file:") === 0) {
-        host = "localhost";
-    }
+	if (window.location.protocol.indexOf("file:") === 0) {
+		host = "localhost";
+	}
     
     // Variables
-    var arduino = new IOBoard(host, 8887);
+    var arduino = new IOBoard(host, 8887); //new IOBoard instance
     var button1; //Player 1
     var button2; //Player 2
     
-    //BUZZ SOUND Javascript
+    //Check if Buzz.js is supported by browser
 	if (!buzz.isSupported()) {
-    alert("Your browser is too old, time to update!");
-}    
-    var buzzer = new buzz.sound("buzz1.mp3");
-    var beep = new buzz.sound("beep.wav");
-    var timeup =  new buzz.sound("timeup.mp3");
-    buzzer.load();
-    beep.load();
-    timeup.load();
+    		alert("Your browser is too old, time to update!");
+	}    
+	var buzzer = new buzz.sound("buzz1.mp3");
+	var beep = new buzz.sound("beep.wav");
+	var timeup =  new buzz.sound("timeup.mp3");
+	buzzer.load();
+	beep.load();
+	timeup.load();
     
     //TIMER Function
-    function mainTimer(max){
-	$('#TIME').html(max);
+	function mainTimer(max){
+		$('#TIME').html(max);
 	    beep.play();
 	    beep.loop();
-	//creating maintimer
-	maintimer = $.timer(
-		function() {
-			maincount++;
-			$('#TIME').html(max-maincount);
-			if((max-maincount)==0){
-				$('#TIME').html("Time's Up!");
-				beep.stop();
-				timeup.play();
-				maintimer.stop()
-				maintimer.active=0;
-				maincount=0;
-			}
-		},
-		1000,
-		false
-	);
+		//creating maintimer
+		maintimer = $.timer(
+			function() {
+				maincount++;
+				$('#TIME').html(max-maincount);
+				if((max-maincount)==0){
+					$('#TIME').html("Time's Up!");
+					beep.stop();
+					timeup.play();
+					maintimer.stop()
+					maintimer.active=0;
+					maincount=0;
+				}
+			},
+			1000,
+			false
+		);
 	
-	maintimer.play();
-	return false;
+		maintimer.play();
+		return false;
 	}
 
 	function steal(){
