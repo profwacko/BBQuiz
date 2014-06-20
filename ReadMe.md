@@ -7,7 +7,7 @@ BBQuiz was developed for a Quiz Show using an Arduino Duemilanove and pushbutton
 Setup
 ------
 
-1. Make sure hardware (schematic to be uploaded) has been loaded with AdvancedFirmata
+1. Make sure Arduino hardware (schematic to be uploaded) has been loaded with the AdvancedFirmata code in the firmware folder.
 2. Open appropriate 'Breakout Server' in 'server' folder. Open connection to QuizApp hardware by clicking Connect. Something like this should appear:
 
         Breakout Server v0.2.3
@@ -16,5 +16,4 @@ Setup
         Connected to IOBoard on: /dev/cu.usbserial-#######
 
 
-3. Open BBQuiz.html in browser of choice, for more fun, switch to presentation or full screen mode.
-4. It should be working properly.
+3. Open BBQuiz.html in browser of choice switch to presentation or full screen mode.
