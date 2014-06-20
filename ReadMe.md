@@ -7,7 +7,9 @@ BBQuiz was developed for a Quiz Show using an Arduino Duemilanove and pushbutton
 Setup
 ------
 
-1. Make sure Arduino hardware (schematic to be uploaded) has been loaded with the AdvancedFirmata code in the firmware folder.
+1. Make sure Arduino hardware (schematic to be uploaded) has been loaded with the AdvancedFirmata code in the firmware folder. Make sure to use the following the schematic:
+![alt tag](BBQuizSchematic.png)
+
 2. Open appropriate 'Breakout Server' in 'server' folder. Open connection to QuizApp hardware by clicking Connect. Something like this should appear:
 
         Breakout Server v0.2.3
